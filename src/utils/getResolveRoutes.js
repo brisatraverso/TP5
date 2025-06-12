@@ -1,12 +1,12 @@
 const resolveRoutes = (route) => {
-
-    if (route.length <= 3) {
-        let validRoute = route === '/' ? route : '/:id';
-        return validRoute;
-
+    // Si es un ID tipo 24 caracteres hex), asumimos que es un ID de cohete //
+    const isValidId = /^[a-f0-9]{24}$/.test(route);
+    
+    if (isValidId) {
+        return '/:id';
     }
 
-    return `/${route}`;
+    return route === '' ? '/' : `/${route}`;
 };
 
 export default resolveRoutes;

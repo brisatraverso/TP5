@@ -1,8 +1,7 @@
-const getHash = () => 
-    location.hash.slice(1).toLocaleLowerCase().split('/')[1] || '/';
-
-
- export default getHash;
+const getHash = () =>
+  location.hash.slice(1).toLowerCase().split('/')[1] || '';
+export default getHash; 
+ 
 
  /* TODO: 
  Esta función `getHash` tiene como objetivo extraer y procesar una parte específica del *hash* 
