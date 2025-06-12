@@ -9,7 +9,7 @@ const Rocket =  async () => {
         <div class="Rockets-inner">
             <article class="Rocket-card">
                 <h2>${rocket.name}</h2>
-                <img src="${rocket.links.patch.small || ''}" alt="${rocket.name}">
+                <img src="${rocket.links?.patch?.small || ''}" alt="${rocket.name}">
                 <h3>Fallas: <span>${rocket.failures.length > 0 ? rocket.failures.map(f =>f.reason).join(','):'Ninguna'}</span></h3>
                 <h3>Campo de detalle: <span>${rocket.details || 'No hay detalles'}</span></</h3>
                 <h3>Número de vuelo: <span>${rocket.flight_number}</span></</h3>
